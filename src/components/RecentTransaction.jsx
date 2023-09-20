@@ -21,7 +21,7 @@ export default function RecentTransaction() {
       style={{
         maxHeight: 200,
         maxWidth: 450,
-        backgroundColor: "#F1F0E8",
+        backgroundColor: "#F9F5F6",
         padding: "10px",
         overflow: "auto",
       }}

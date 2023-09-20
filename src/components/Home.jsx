@@ -1,9 +1,18 @@
 
-export default function Home(){
+ import { Container, Typography } from "@mui/material";
+ import SideBarMenu from "./SideBarMenu";
+ 
+ 
+
+
+export default function Home(props){
+    console.log(props.setShowDashboard)
 
 return(
     <div>
-        <h1>Welcome to King's Restaurant</h1>
+        <Container style={{ width: "25vw", float: "left" }}>
+        <SideBarMenu setShowDashboard={props.setShowDashboard}/>
+      </Container>
     </div>
 )
 
