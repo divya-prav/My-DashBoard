@@ -12,7 +12,7 @@ export default function DashBoard(props) {
   return (
     <>
     
-      <Grid container spacing={0} columnSpacing={3}>
+      <Grid container spacing={0}>
         <Grid item xs={12}>
           <Header />
         </Grid>

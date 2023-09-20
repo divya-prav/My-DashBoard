@@ -47,7 +47,7 @@ export default function RecentTransaction() {
               </ListItem>
 
               <ListItem >
-                <Typography variant="subtitle">${transaction.cost}</Typography>
+                <Typography variant="subtitle1" color='green'>${transaction.cost}</Typography>
               </ListItem>
               
             </ListItem>
