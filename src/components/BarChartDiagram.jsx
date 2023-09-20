@@ -29,8 +29,13 @@ export default function BarChartDiagram() {
        <InsertChartIcon fontSize="small" style={{paddingRight:'40px'}}></InsertChartIcon>
         Sales by Country</Typography>
       <BarChart
+        dataset={mockBarData}
         xAxis={[{scaleType:'band',data:country}]}
-        series={[{data:donut},{data:burger},{data:kebab}]}
+        series={[
+            {dataKey:'donut',label:'Donut'},
+            {dataKey:'burger',label:'Burger'},
+            {dataKey:'kebab',label:'Kebab'}
+        ]}
         width={600}
         height={300}
     
