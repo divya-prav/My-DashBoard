@@ -14,7 +14,7 @@ export default function BarChartDiagram() {
   kebab = mockBarData.map((data) => data.kebab);
 
   const divStyles={
-    backgroundColor : "#F1F0E8",
+    backgroundColor : "#F9F5F6",
     padding:'10px',
     marginTop:'10px',
     borderRadius:'10px',

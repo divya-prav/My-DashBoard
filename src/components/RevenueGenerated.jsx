@@ -20,7 +20,7 @@ export default function RevenueGenerated() {
     height: 200,
     padding: "10px",
     borderRadius: "5px",
-    backgroundColor: "#F1F0E8",
+    backgroundColor: "#F9F5F6",
     alignContent:'center',
     
 

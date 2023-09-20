@@ -1,42 +1,24 @@
 import "./App.css";
-import SideBarMenu from "./components/SideBarMenu";
-import RecentTransaction from "./components/RecentTransaction";
-import Grid from "@mui/material/Unstable_Grid2";
-import RevenueGenerated from "./components/RevenueGenerated";
-import BarChart from "./components/BarChartDiagram";
-import { Container, Paper } from "@mui/material";
-import Header from "./components/Header";
+import { Paper } from "@mui/material";
+import Home from "./components/Home";
+import DashBoard from "./components/DashBoard";
+import FAQ from "./components/FAQ";
+import { useState } from "react";
 
 function App() {
+  const [showDashboard,setShowDashboard] = useState(true);
 
   const paperStyles = {
-    padding:'20px',
-    backgroundColor:'#F0F0F0'
-  }
+    padding: "20px",
+    backgroundColor: "#F0F0F0",
+  };
 
   return (
     <Paper variant="elevation" elevation={0} style={paperStyles}>
-      <Container style={{ width: "25vw", float: "left" }}>
-        <SideBarMenu />
-      </Container>
-      <Grid container spacing={0} columnSpacing={3}>
-        <Grid item xs={12}>
-         <Header/>
-        </Grid>
-        <Grid item xs={6}>
-          <RecentTransaction />
-        </Grid>
-        <Grid item xs={6}>
-          <RevenueGenerated />
-        </Grid>
-        <Grid item xs={2}>
-
-        </Grid>
-
-        <Grid item xs={8}>
-          <BarChart />
-        </Grid>
-      </Grid>
+      <Home setShowDashboard={setShowDashboard}/>
+      {showDashboard ? 
+      <DashBoard showDashboard={showDashboard} setShowDashboard={setShowDashboard}/> :
+      <FAQ  showDashboard={showDashboard} setShowDashboard={setShowDashboard}/>}
     </Paper>
   );
 }
